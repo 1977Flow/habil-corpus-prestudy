@@ -1,0 +1,610 @@
+{
+  "P1_information_loss": {
+    "n_unique_snomed_codes": 309,
+    "n_unique_descriptions": 309,
+    "code_to_description_ratio": 1.0,
+    "n_multi_code_groups": 2,
+    "examples_multi_code": {
+      "metastatic malignant neoplasm ": [
+        {
+          "code": "94503003",
+          "full_description": "Metastatic malignant neoplasm to prostate (disorder)"
+        },
+        {
+          "code": "94260004",
+          "full_description": "Metastatic malignant neoplasm to colon (disorder)"
+        }
+      ],
+      "fracture of vertebral column w": [
+        {
+          "code": "1734006",
+          "full_description": "Fracture of vertebral column with spinal cord injury (disorder)"
+        },
+        {
+          "code": "15724005",
+          "full_description": "Fracture of vertebral column without spinal cord injury (disorder)"
+        }
+      ]
+    },
+    "encounter_info_loss": {
+      "total_encounters_with_conditions": 265990,
+      "encounters_with_code_compression": 0,
+      "compression_rate": 0.0
+    },
+    "temporal_resolution": {
+      "conditions_with_stop_date": 309984,
+      "conditions_without_stop": 105480,
+      "pct_unresolved": 25.4
+    },
+    "clinical_domains": {
+      "History": "15",
+      "Acute": "14",
+      "Chronic": "14",
+      "Fracture": "9",
+      "Injury": "7",
+      "Laceration": "5",
+      "Primary": "4",
+      "Traumatic": "4",
+      "Concussion": "3",
+      "Sepsis": "3",
+      "Sprain": "3",
+      "Suspected": "3",
+      "Loss": "2",
+      "Social": "2",
+      "Body": "2"
+    }
+  },
+  "P11_drift_sentinel": {
+    "yearly_drift_jsd": {
+      "2005->2006": 0.013723,
+      "2006->2007": 0.016201,
+      "2007->2008": 0.017302,
+      "2008->2009": 0.013991,
+      "2009->2010": 0.014039,
+      "2010->2011": 0.013827,
+      "2011->2012": 0.012277,
+      "2012->2013": 0.011984,
+      "2013->2014": 0.163956,
+      "2014->2015": 0.152203,
+      "2015->2016": 0.068916,
+      "2016->2017": 0.004326,
+      "2017->2018": 0.002411,
+      "2018->2019": 0.002321,
+      "2019->2020": 0.046677,
+      "2020->2021": 0.003548,
+      "2021->2022": 0.035003,
+      "2022->2023": 0.00197,
+      "2023->2024": 0.002166,
+      "2024->2025": 0.002009,
+      "2025->2026": 0.006198
+    },
+    "cumulative_drift_from_baseline": {
+      "2006": 0.013723,
+      "2007": 0.018745,
+      "2008": 0.016127,
+      "2009": 0.016556,
+      "2010": 0.020392,
+      "2011": 0.021001,
+      "2012": 0.021593,
+      "2013": 0.027175,
+      "2014": 0.187782,
+      "2015": 0.071312,
+      "2016": 0.102438,
+      "2017": 0.113581,
+      "2018": 0.110385,
+      "2019": 0.108141,
+      "2020": 0.14615,
+      "2021": 0.1351,
+      "2022": 0.111831,
+      "2023": 0.110331,
+      "2024": 0.109223,
+      "2025": 0.109415,
+      "2026": 0.113068
+    },
+    "new_conditions_per_year": {
+      "2005": 156,
+      "2006": 19,
+      "2007": 21,
+      "2008": 10,
+      "2009": 4,
+      "2010": 15,
+      "2011": 7,
+      "2012": 3,
+      "2013": 4,
+      "2014": 8,
+      "2015": 1,
+      "2016": 9,
+      "2017": 3,
+      "2018": 3,
+      "2019": 2,
+      "2020": 32,
+      "2021": 2,
+      "2022": 0,
+      "2023": 0,
+      "2024": 0,
+      "2025": 0,
+      "2026": 0
+    },
+    "drift_statistics": {
+      "mean_yearly_jsd": 0.028812,
+      "median_yearly_jsd": 0.013723,
+      "max_yearly_jsd": 0.163956,
+      "n_drift_alerts": 5,
+      "alert_threshold": 0.027446
+    },
+    "drift_alerts": {
+      "2013->2014": 0.163956,
+      "2014->2015": 0.152203,
+      "2015->2016": 0.068916,
+      "2019->2020": 0.046677,
+      "2021->2022": 0.035003
+    },
+    "vocabulary_growth": {
+      "initial_vocabulary": 156,
+      "final_vocabulary": 299,
+      "total_new_conditions_added": 299
+    }
+  },
+  "P12_cost_of_drift": {
+    "cost_comparison": {
+      "mean_cost_stable_conditions": 1937.18,
+      "mean_cost_drifting_conditions": 8368.34,
+      "cost_ratio": 4.32,
+      "total_cost_stable": 741447288.98,
+      "total_cost_drifting": 38703574.83
+    },
+    "payer_coverage_gap": {
+      "mean_gap_stable": 756.39,
+      "mean_gap_drifting": 2331.79,
+      "gap_ratio": 3.08
+    },
+    "cost_variance": {
+      "mean_std_stable": 1959.52,
+      "mean_std_drifting": 6804.22
+    },
+    "n_stable_conditions": 73,
+    "n_drifting_conditions": 145,
+    "encounter_class_distribution": {
+      "stable": {
+        "wellness": "195294",
+        "ambulatory": "68711",
+        "outpatient": "62916",
+        "urgentcare": "38325",
+        "emergency": "15910"
+      },
+      "drifting": {
+        "ambulatory": "2056",
+        "emergency": "1022",
+        "inpatient": "607",
+        "outpatient": "406",
+        "wellness": "397"
+      }
+    }
+  },
+  "S1_terminology_coverage": {
+    "total_unique_conditions": 309,
+    "ai_health_terms_found": 1,
+    "ai_health_terms_searched": 20,
+    "ai_coverage_gap": 95.0,
+    "ai_terms_with_matches": {
+      "AI": [
+        "Concussion injury of brain (disorder)",
+        "Chronic pain (finding)",
+        "Sprain (morphologic abnormality)",
+        "Sprain of ankle (disorder)",
+        "Chronic neck pain (finding)",
+        "Transformed migraine (disorder)",
+        "Smokes tobacco daily (finding)",
+        "Chronic low back pain (finding)",
+        "Muscle pain (finding)",
+        "Joint pain",
+        "Sprain of wrist (disorder)",
+        "Chronic intractable migraine without aura (disorder)",
+        "Awaiting transplantation of kidney (situation)",
+        "Chronic congestive heart failure (disorder)",
+        "Pain (finding)",
+        "Acute respiratory failure (disorder)",
+        "Traumatic or nontraumatic brain injury (disorder)",
+        "Awaiting transplantation of bone marrow (situation)",
+        "Kidney transplant failure and rejection (disorder)",
+        "Traumatic brain injury (disorder)",
+        "Heart failure (disorder)",
+        "History of aortic valve repair (situation)",
+        "Acute renal failure on dialysis (disorder)"
+      ]
+    },
+    "ai_terms_without_matches": [
+      "telemedicine",
+      "telehealth",
+      "remote monitoring",
+      "wearable",
+      "digital",
+      "artificial intelligence",
+      "machine learning",
+      "clinical decision support",
+      "algorithm",
+      "chatbot",
+      "virtual care",
+      "mHealth",
+      "eHealth",
+      "remote patient",
+      "sensor",
+      "app-based",
+      "automated",
+      "predictive",
+      "screening tool"
+    ],
+    "ontological_quality": {
+      "with_snomed_qualifier": 301,
+      "without_qualifier": 8,
+      "qualifier_rate": 97.4
+    },
+    "description_complexity": {
+      "mean_word_count": 4.4,
+      "max_word_count": 11,
+      "single_word_conditions": 1
+    },
+    "code_types": {
+      "numeric_snomed": "309"
+    }
+  },
+  "S2_semantic_entropy": {
+    "overall_entropy": {
+      "H_sem_bits": 5.3547,
+      "H_max_bits": 8.2715,
+      "normalized": 0.6474,
+      "n_codes": 309
+    },
+    "domain_entropy": {
+      "Other": {
+        "n_codes": 231,
+        "n_instances": 320295,
+        "entropy_bits": 4.7839,
+        "max_entropy": 7.8517,
+        "normalized_entropy": 0.6093
+      },
+      "Oncology": {
+        "n_codes": 14,
+        "n_instances": 1320,
+        "entropy_bits": 3.4379,
+        "max_entropy": 3.8074,
+        "normalized_entropy": 0.903
+      },
+      "Renal": {
+        "n_codes": 11,
+        "n_instances": 3979,
+        "entropy_bits": 2.7111,
+        "max_entropy": 3.4594,
+        "normalized_entropy": 0.7837
+      },
+      "Musculoskeletal-Fracture": {
+        "n_codes": 12,
+        "n_instances": 5035,
+        "entropy_bits": 2.6799,
+        "max_entropy": 3.585,
+        "normalized_entropy": 0.7475
+      },
+      "Metabolic-Diabetes": {
+        "n_codes": 11,
+        "n_instances": 8507,
+        "entropy_bits": 2.2129,
+        "max_entropy": 3.4594,
+        "normalized_entropy": 0.6397
+      },
+      "Pain": {
+        "n_codes": 6,
+        "n_instances": 6257,
+        "entropy_bits": 1.8056,
+        "max_entropy": 2.585,
+        "normalized_entropy": 0.6985
+      },
+      "Infectious": {
+        "n_codes": 9,
+        "n_instances": 21412,
+        "entropy_bits": 1.6214,
+        "max_entropy": 3.1699,
+        "normalized_entropy": 0.5115
+      },
+      "Respiratory": {
+        "n_codes": 5,
+        "n_instances": 6322,
+        "entropy_bits": 0.673,
+        "max_entropy": 2.3219,
+        "normalized_entropy": 0.2898
+      },
+      "Mental-Health": {
+        "n_codes": 7,
+        "n_instances": 34234,
+        "entropy_bits": 0.3509,
+        "max_entropy": 2.8074,
+        "normalized_entropy": 0.125
+      },
+      "Metabolic-Obesity": {
+        "n_codes": 2,
+        "n_instances": 5502,
+        "entropy_bits": 0.1051,
+        "max_entropy": 1.0,
+        "normalized_entropy": 0.1051
+      },
+      "Cardiovascular-Hypertension": {
+        "n_codes": 1,
+        "n_instances": 2601,
+        "entropy_bits": 0,
+        "max_entropy": 0,
+        "normalized_entropy": 0
+      }
+    },
+    "high_entropy_domains": [
+      "Oncology"
+    ],
+    "low_entropy_domains": [
+      "Respiratory",
+      "Mental-Health",
+      "Metabolic-Obesity"
+    ]
+  },
+  "S3_coding_variance": {
+    "n_organizations": 1146,
+    "coding_variance_by_condition": {
+      "Unemployed (finding)": {
+        "n_organizations": 536,
+        "mean_coding_rate": 0.020254,
+        "std_coding_rate": 0.020765,
+        "cv": 1.0252,
+        "hhi": 0.003945,
+        "max_rate": 0.2,
+        "min_rate": 0.00012,
+        "rate_ratio_max_min": 1671.8
+      },
+      "Received higher education (finding)": {
+        "n_organizations": 418,
+        "mean_coding_rate": 0.036982,
+        "std_coding_rate": 0.030434,
+        "cv": 0.8229,
+        "hhi": 0.005265,
+        "max_rate": 0.5,
+        "min_rate": 0.000109,
+        "rate_ratio_max_min": 4599.5
+      },
+      "Prediabetes (finding)": {
+        "n_organizations": 512,
+        "mean_coding_rate": 0.021696,
+        "std_coding_rate": 0.017755,
+        "cv": 0.8184,
+        "hhi": 0.004092,
+        "max_rate": 0.2,
+        "min_rate": 0.00012,
+        "rate_ratio_max_min": 1671.8
+      },
+      "Gingivitis (disorder)": {
+        "n_organizations": 700,
+        "mean_coding_rate": 0.092541,
+        "std_coding_rate": 0.069649,
+        "cv": 0.7526,
+        "hhi": 0.003689,
+        "max_rate": 0.6,
+        "min_rate": 0.000299,
+        "rate_ratio_max_min": 2006.2
+      },
+      "Victim of intimate partner abuse (finding)": {
+        "n_organizations": 614,
+        "mean_coding_rate": 0.024602,
+        "std_coding_rate": 0.018049,
+        "cv": 0.7336,
+        "hhi": 0.003752,
+        "max_rate": 0.133333,
+        "min_rate": 0.00012,
+        "rate_ratio_max_min": 1114.5
+      },
+      "Not in labor force (finding)": {
+        "n_organizations": 650,
+        "mean_coding_rate": 0.03251,
+        "std_coding_rate": 0.023842,
+        "cv": 0.7334,
+        "hhi": 0.004035,
+        "max_rate": 0.230769,
+        "min_rate": 0.000239,
+        "rate_ratio_max_min": 964.5
+      },
+      "Social isolation (finding)": {
+        "n_organizations": 647,
+        "mean_coding_rate": 0.037879,
+        "std_coding_rate": 0.027655,
+        "cv": 0.7301,
+        "hhi": 0.003743,
+        "max_rate": 0.230769,
+        "min_rate": 0.00012,
+        "rate_ratio_max_min": 1929.0
+      },
+      "Limited social contact (finding)": {
+        "n_organizations": 643,
+        "mean_coding_rate": 0.037584,
+        "std_coding_rate": 0.02629,
+        "cv": 0.6995,
+        "hhi": 0.003835,
+        "max_rate": 0.2,
+        "min_rate": 0.000359,
+        "rate_ratio_max_min": 557.3
+      },
+      "Reports of violence in the environment (finding)": {
+        "n_organizations": 598,
+        "mean_coding_rate": 0.020092,
+        "std_coding_rate": 0.014009,
+        "cv": 0.6973,
+        "hhi": 0.003952,
+        "max_rate": 0.094595,
+        "min_rate": 0.000179,
+        "rate_ratio_max_min": 527.1
+      },
+      "Body mass index 30+ - obesity (finding)": {
+        "n_organizations": 524,
+        "mean_coding_rate": 0.02555,
+        "std_coding_rate": 0.017379,
+        "cv": 0.6802,
+        "hhi": 0.003968,
+        "max_rate": 0.083333,
+        "min_rate": 0.00012,
+        "rate_ratio_max_min": 696.6
+      },
+      "Full-time employment (finding)": {
+        "n_organizations": 699,
+        "mean_coding_rate": 0.091217,
+        "std_coding_rate": 0.061412,
+        "cv": 0.6732,
+        "hhi": 0.003663,
+        "max_rate": 0.4,
+        "min_rate": 0.000538,
+        "rate_ratio_max_min": 743.0
+      },
+      "Part-time employment (finding)": {
+        "n_organizations": 677,
+        "mean_coding_rate": 0.05581,
+        "std_coding_rate": 0.036869,
+        "cv": 0.6606,
+        "hhi": 0.003878,
+        "max_rate": 0.235294,
+        "min_rate": 0.000239,
+        "rate_ratio_max_min": 983.4
+      },
+      "Stress (finding)": {
+        "n_organizations": 698,
+        "mean_coding_rate": 0.096096,
+        "std_coding_rate": 0.06308,
+        "cv": 0.6564,
+        "hhi": 0.003769,
+        "max_rate": 0.4,
+        "min_rate": 0.000479,
+        "rate_ratio_max_min": 835.9
+      },
+      "Medication review due (situation)": {
+        "n_organizations": 722,
+        "mean_coding_rate": 0.240501,
+        "std_coding_rate": 0.156018,
+        "cv": 0.6487,
+        "hhi": 0.003864,
+        "max_rate": 0.6,
+        "min_rate": 0.000957,
+        "rate_ratio_max_min": 626.9
+      },
+      "Acute bronchitis (disorder)": {
+        "n_organizations": 152,
+        "mean_coding_rate": 0.012625,
+        "std_coding_rate": 0.007558,
+        "cv": 0.5987,
+        "hhi": 0.011813,
+        "max_rate": 0.075472,
+        "min_rate": 0.000179,
+        "rate_ratio_max_min": 420.6
+      },
+      "Normal pregnancy (finding)": {
+        "n_organizations": 132,
+        "mean_coding_rate": 0.011484,
+        "std_coding_rate": 0.006686,
+        "cv": 0.5822,
+        "hhi": 0.013271,
+        "max_rate": 0.042155,
+        "min_rate": 0.000961,
+        "rate_ratio_max_min": 43.8
+      },
+      "Acute viral pharyngitis (disorder)": {
+        "n_organizations": 151,
+        "mean_coding_rate": 0.015367,
+        "std_coding_rate": 0.008223,
+        "cv": 0.5351,
+        "hhi": 0.011575,
+        "max_rate": 0.04918,
+        "min_rate": 6e-05,
+        "rate_ratio_max_min": 822.2
+      },
+      "Primary dental caries (disorder)": {
+        "n_organizations": 151,
+        "mean_coding_rate": 0.015767,
+        "std_coding_rate": 0.007687,
+        "cv": 0.4875,
+        "hhi": 0.011392,
+        "max_rate": 0.075472,
+        "min_rate": 6e-05,
+        "rate_ratio_max_min": 1261.7
+      },
+      "Viral sinusitis (disorder)": {
+        "n_organizations": 151,
+        "mean_coding_rate": 0.025705,
+        "std_coding_rate": 0.010667,
+        "cv": 0.415,
+        "hhi": 0.011636,
+        "max_rate": 0.061111,
+        "min_rate": 0.002672,
+        "rate_ratio_max_min": 22.9
+      },
+      "Gingival disease (disorder)": {
+        "n_organizations": 151,
+        "mean_coding_rate": 0.019277,
+        "std_coding_rate": 0.007169,
+        "cv": 0.3719,
+        "hhi": 0.011242,
+        "max_rate": 0.06383,
+        "min_rate": 0.00012,
+        "rate_ratio_max_min": 533.6
+      }
+    },
+    "summary": {
+      "mean_cv_across_conditions": 0.6661,
+      "max_cv_condition": "Unemployed (finding)",
+      "max_cv_value": 1.0252,
+      "mean_hhi": 0.006319,
+      "conditions_with_high_variance": 17
+    }
+  },
+  "PRAXIS_AI_operationalization": {
+    "domain_metrics": {
+      "D1_workflow_integration": {
+        "encounter_class_diversity": 10,
+        "ambulatory_share": 0.5522,
+        "primary_care_relevant": 0.7582
+      },
+      "D2_data_quality": {
+        "snomed_coding_completeness": 1.0,
+        "unique_condition_codes": 309,
+        "code_description_ratio": 1.0
+      },
+      "D3_patient_safety": {
+        "contradictory_diagnoses": 608,
+        "pct_contradictory": 5.3
+      },
+      "D4_regulatory_compliance": {
+        "billing_completeness": 1.0
+      },
+      "D5_health_equity": {
+        "gender_balance": {
+          "M": 0.5022,
+          "F": 0.4978
+        },
+        "race_diversity_entropy": 0.9646,
+        "n_race_categories": 6
+      },
+      "D6_provider_interaction": {
+        "mean_encounters_per_provider": 610.2,
+        "provider_load_cv": 2.41
+      },
+      "D7_scalability": {
+        "total_encounters": 677938,
+        "annual_growth_rate": -0.1875
+      }
+    }
+  },
+  "metadata": {
+    "studies": [
+      "P1",
+      "P11",
+      "P12",
+      "S1",
+      "S2",
+      "S3",
+      "PRAXIS-AI"
+    ],
+    "dataset": "Synthea v3.x synthetic EHR",
+    "n_patients": 11475,
+    "timestamp": "2026-03-30T07:50:20.970080",
+    "citation": "Walonoski J et al. Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record. JAMIA 2018;25(3):230-238."
+  }
+}

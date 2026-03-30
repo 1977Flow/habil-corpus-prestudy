@@ -1,0 +1,964 @@
+{
+  "metadata": {
+    "study": "P2 Artificial Epidemiology D(C) Divergence Pre-Study",
+    "dataset": "Synthea v3.x synthetic EHR",
+    "n_patients": 11475,
+    "n_conditions": 415464,
+    "n_observations": 8750706,
+    "timestamp": "2026-03-30T07:43:29.194792",
+    "citation": "Walonoski J et al. Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record. JAMIA 2018;25(3):230-238."
+  },
+  "dc_divergence": {
+    "Diabetes": {
+      "n_admin": 4832,
+      "n_clinical": 498,
+      "p_admin": 0.4211,
+      "p_clinical": 0.0434,
+      "D_C": 0.3777,
+      "D_C_abs": 0.3777,
+      "n_coded_only": 4334,
+      "n_uncoded": 0,
+      "n_overlap": 498,
+      "lab_code": "4548-4",
+      "threshold": 6.5,
+      "n_lab_measurements": 90247
+    },
+    "Hypertension": {
+      "n_admin": 2601,
+      "n_clinical": 2874,
+      "p_admin": 0.2267,
+      "p_clinical": 0.2505,
+      "D_C": -0.0238,
+      "D_C_abs": 0.0238,
+      "n_coded_only": 1468,
+      "n_uncoded": 1741,
+      "n_overlap": 1133,
+      "lab_code": "8480-6",
+      "threshold": 140,
+      "n_lab_measurements": 163268
+    },
+    "Obesity": {
+      "n_admin": 5426,
+      "n_clinical": 4263,
+      "p_admin": 0.4729,
+      "p_clinical": 0.3715,
+      "D_C": 0.1014,
+      "D_C_abs": 0.1014,
+      "n_coded_only": 1434,
+      "n_uncoded": 271,
+      "n_overlap": 3992,
+      "lab_code": "39156-5",
+      "threshold": 30,
+      "n_lab_measurements": 139384
+    },
+    "Hyperlipidemia": {
+      "n_admin": 1132,
+      "n_clinical": 1596,
+      "p_admin": 0.0986,
+      "p_clinical": 0.1391,
+      "D_C": -0.0404,
+      "D_C_abs": 0.0404,
+      "n_coded_only": 662,
+      "n_uncoded": 1126,
+      "n_overlap": 470,
+      "lab_code": "2093-3",
+      "threshold": 240,
+      "n_lab_measurements": 58532
+    },
+    "Prediabetes": {
+      "n_admin": 4286,
+      "n_clinical": 3810,
+      "p_admin": 0.3735,
+      "p_clinical": 0.332,
+      "D_C": 0.0415,
+      "D_C_abs": 0.0415,
+      "n_coded_only": 615,
+      "n_uncoded": 139,
+      "n_overlap": 3671,
+      "lab_code": "4548-4",
+      "threshold": 5.7,
+      "n_lab_measurements": 90247
+    }
+  },
+  "upcoding_simulation": {
+    "Diabetes": {
+      "baseline_D_C": 0.3777,
+      "shift_10pct": {
+        "n_shifted": 0,
+        "new_p_admin": 0.4211,
+        "new_D_C": 0.3777,
+        "D_C_amplification": 1.0
+      },
+      "shift_20pct": {
+        "n_shifted": 0,
+        "new_p_admin": 0.4211,
+        "new_D_C": 0.3777,
+        "D_C_amplification": 1.0
+      },
+      "shift_30pct": {
+        "n_shifted": 0,
+        "new_p_admin": 0.4211,
+        "new_D_C": 0.3777,
+        "D_C_amplification": 1.0
+      }
+    },
+    "Hypertension": {
+      "baseline_D_C": -0.0238,
+      "shift_10pct": {
+        "n_shifted": 174,
+        "new_p_admin": 0.2418,
+        "new_D_C": -0.0087,
+        "D_C_amplification": 0.36
+      },
+      "shift_20pct": {
+        "n_shifted": 348,
+        "new_p_admin": 0.257,
+        "new_D_C": 0.0065,
+        "D_C_amplification": 0.27
+      },
+      "shift_30pct": {
+        "n_shifted": 522,
+        "new_p_admin": 0.2722,
+        "new_D_C": 0.0217,
+        "D_C_amplification": 0.91
+      }
+    },
+    "Obesity": {
+      "baseline_D_C": 0.1014,
+      "shift_10pct": {
+        "n_shifted": 27,
+        "new_p_admin": 0.4752,
+        "new_D_C": 0.1037,
+        "D_C_amplification": 1.02
+      },
+      "shift_20pct": {
+        "n_shifted": 54,
+        "new_p_admin": 0.4776,
+        "new_D_C": 0.1061,
+        "D_C_amplification": 1.05
+      },
+      "shift_30pct": {
+        "n_shifted": 81,
+        "new_p_admin": 0.4799,
+        "new_D_C": 0.1084,
+        "D_C_amplification": 1.07
+      }
+    },
+    "Hyperlipidemia": {
+      "baseline_D_C": -0.0404,
+      "shift_10pct": {
+        "n_shifted": 112,
+        "new_p_admin": 0.1084,
+        "new_D_C": -0.0307,
+        "D_C_amplification": 0.76
+      },
+      "shift_20pct": {
+        "n_shifted": 225,
+        "new_p_admin": 0.1183,
+        "new_D_C": -0.0208,
+        "D_C_amplification": 0.52
+      },
+      "shift_30pct": {
+        "n_shifted": 337,
+        "new_p_admin": 0.128,
+        "new_D_C": -0.0111,
+        "D_C_amplification": 0.27
+      }
+    },
+    "Prediabetes": {
+      "baseline_D_C": 0.0415,
+      "shift_10pct": {
+        "n_shifted": 13,
+        "new_p_admin": 0.3746,
+        "new_D_C": 0.0426,
+        "D_C_amplification": 1.03
+      },
+      "shift_20pct": {
+        "n_shifted": 27,
+        "new_p_admin": 0.3759,
+        "new_D_C": 0.0439,
+        "D_C_amplification": 1.06
+      },
+      "shift_30pct": {
+        "n_shifted": 41,
+        "new_p_admin": 0.3771,
+        "new_D_C": 0.0451,
+        "D_C_amplification": 1.09
+      }
+    }
+  },
+  "temporal_drift": {
+    "Diabetes": {
+      "2000": {
+        "p_admin": 0.2031,
+        "p_clinical": 0.0027,
+        "D_C": 0.2003
+      },
+      "2001": {
+        "p_admin": 0.2112,
+        "p_clinical": 0.0029,
+        "D_C": 0.2083
+      },
+      "2002": {
+        "p_admin": 0.2191,
+        "p_clinical": 0.0031,
+        "D_C": 0.216
+      },
+      "2003": {
+        "p_admin": 0.2274,
+        "p_clinical": 0.0032,
+        "D_C": 0.2241
+      },
+      "2004": {
+        "p_admin": 0.2357,
+        "p_clinical": 0.0037,
+        "D_C": 0.2321
+      },
+      "2005": {
+        "p_admin": 0.2438,
+        "p_clinical": 0.004,
+        "D_C": 0.2398
+      },
+      "2006": {
+        "p_admin": 0.252,
+        "p_clinical": 0.0042,
+        "D_C": 0.2478
+      },
+      "2007": {
+        "p_admin": 0.2607,
+        "p_clinical": 0.0046,
+        "D_C": 0.256
+      },
+      "2008": {
+        "p_admin": 0.2694,
+        "p_clinical": 0.005,
+        "D_C": 0.2644
+      },
+      "2009": {
+        "p_admin": 0.2767,
+        "p_clinical": 0.0053,
+        "D_C": 0.2714
+      },
+      "2010": {
+        "p_admin": 0.2849,
+        "p_clinical": 0.0056,
+        "D_C": 0.2793
+      },
+      "2011": {
+        "p_admin": 0.2944,
+        "p_clinical": 0.006,
+        "D_C": 0.2884
+      },
+      "2012": {
+        "p_admin": 0.3014,
+        "p_clinical": 0.0064,
+        "D_C": 0.2949
+      },
+      "2013": {
+        "p_admin": 0.3124,
+        "p_clinical": 0.0065,
+        "D_C": 0.3059
+      },
+      "2014": {
+        "p_admin": 0.3211,
+        "p_clinical": 0.0071,
+        "D_C": 0.3141
+      },
+      "2015": {
+        "p_admin": 0.3297,
+        "p_clinical": 0.0074,
+        "D_C": 0.3223
+      },
+      "2016": {
+        "p_admin": 0.3395,
+        "p_clinical": 0.016,
+        "D_C": 0.3235
+      },
+      "2017": {
+        "p_admin": 0.3474,
+        "p_clinical": 0.0227,
+        "D_C": 0.3247
+      },
+      "2018": {
+        "p_admin": 0.3569,
+        "p_clinical": 0.0251,
+        "D_C": 0.3319
+      },
+      "2019": {
+        "p_admin": 0.3659,
+        "p_clinical": 0.0277,
+        "D_C": 0.3382
+      },
+      "2020": {
+        "p_admin": 0.3761,
+        "p_clinical": 0.0303,
+        "D_C": 0.3458
+      },
+      "2021": {
+        "p_admin": 0.3849,
+        "p_clinical": 0.0326,
+        "D_C": 0.3523
+      },
+      "2022": {
+        "p_admin": 0.3936,
+        "p_clinical": 0.0348,
+        "D_C": 0.3589
+      },
+      "2023": {
+        "p_admin": 0.4028,
+        "p_clinical": 0.037,
+        "D_C": 0.3658
+      },
+      "2024": {
+        "p_admin": 0.4103,
+        "p_clinical": 0.0401,
+        "D_C": 0.3702
+      },
+      "2025": {
+        "p_admin": 0.4199,
+        "p_clinical": 0.0424,
+        "D_C": 0.3774
+      },
+      "2026": {
+        "p_admin": 0.4211,
+        "p_clinical": 0.0434,
+        "D_C": 0.3777
+      }
+    },
+    "Hypertension": {
+      "2000": {
+        "p_admin": 0.0935,
+        "p_clinical": 0.0154,
+        "D_C": 0.0781
+      },
+      "2001": {
+        "p_admin": 0.0974,
+        "p_clinical": 0.0157,
+        "D_C": 0.0817
+      },
+      "2002": {
+        "p_admin": 0.1031,
+        "p_clinical": 0.0168,
+        "D_C": 0.0863
+      },
+      "2003": {
+        "p_admin": 0.108,
+        "p_clinical": 0.0179,
+        "D_C": 0.0901
+      },
+      "2004": {
+        "p_admin": 0.1123,
+        "p_clinical": 0.0183,
+        "D_C": 0.094
+      },
+      "2005": {
+        "p_admin": 0.1166,
+        "p_clinical": 0.0188,
+        "D_C": 0.0978
+      },
+      "2006": {
+        "p_admin": 0.1216,
+        "p_clinical": 0.0195,
+        "D_C": 0.102
+      },
+      "2007": {
+        "p_admin": 0.1258,
+        "p_clinical": 0.0205,
+        "D_C": 0.1053
+      },
+      "2008": {
+        "p_admin": 0.1305,
+        "p_clinical": 0.0215,
+        "D_C": 0.109
+      },
+      "2009": {
+        "p_admin": 0.1371,
+        "p_clinical": 0.0225,
+        "D_C": 0.1146
+      },
+      "2010": {
+        "p_admin": 0.1421,
+        "p_clinical": 0.0235,
+        "D_C": 0.1186
+      },
+      "2011": {
+        "p_admin": 0.1468,
+        "p_clinical": 0.0245,
+        "D_C": 0.1224
+      },
+      "2012": {
+        "p_admin": 0.1524,
+        "p_clinical": 0.0266,
+        "D_C": 0.1258
+      },
+      "2013": {
+        "p_admin": 0.1581,
+        "p_clinical": 0.0286,
+        "D_C": 0.1295
+      },
+      "2014": {
+        "p_admin": 0.1639,
+        "p_clinical": 0.0296,
+        "D_C": 0.1343
+      },
+      "2015": {
+        "p_admin": 0.1682,
+        "p_clinical": 0.0305,
+        "D_C": 0.1377
+      },
+      "2016": {
+        "p_admin": 0.1742,
+        "p_clinical": 0.0783,
+        "D_C": 0.0959
+      },
+      "2017": {
+        "p_admin": 0.181,
+        "p_clinical": 0.1178,
+        "D_C": 0.0632
+      },
+      "2018": {
+        "p_admin": 0.1861,
+        "p_clinical": 0.145,
+        "D_C": 0.041
+      },
+      "2019": {
+        "p_admin": 0.1911,
+        "p_clinical": 0.1659,
+        "D_C": 0.0252
+      },
+      "2020": {
+        "p_admin": 0.197,
+        "p_clinical": 0.1842,
+        "D_C": 0.0128
+      },
+      "2021": {
+        "p_admin": 0.2034,
+        "p_clinical": 0.2003,
+        "D_C": 0.0031
+      },
+      "2022": {
+        "p_admin": 0.2085,
+        "p_clinical": 0.2124,
+        "D_C": -0.0039
+      },
+      "2023": {
+        "p_admin": 0.2137,
+        "p_clinical": 0.2241,
+        "D_C": -0.0105
+      },
+      "2024": {
+        "p_admin": 0.2196,
+        "p_clinical": 0.2365,
+        "D_C": -0.0169
+      },
+      "2025": {
+        "p_admin": 0.2256,
+        "p_clinical": 0.2486,
+        "D_C": -0.023
+      },
+      "2026": {
+        "p_admin": 0.2267,
+        "p_clinical": 0.2505,
+        "D_C": -0.0238
+      }
+    },
+    "Obesity": {
+      "2000": {
+        "p_admin": 0.2241,
+        "p_clinical": 0.0269,
+        "D_C": 0.1971
+      },
+      "2001": {
+        "p_admin": 0.2342,
+        "p_clinical": 0.0288,
+        "D_C": 0.2054
+      },
+      "2002": {
+        "p_admin": 0.2448,
+        "p_clinical": 0.0302,
+        "D_C": 0.2146
+      },
+      "2003": {
+        "p_admin": 0.2547,
+        "p_clinical": 0.0324,
+        "D_C": 0.2223
+      },
+      "2004": {
+        "p_admin": 0.2647,
+        "p_clinical": 0.0341,
+        "D_C": 0.2306
+      },
+      "2005": {
+        "p_admin": 0.2736,
+        "p_clinical": 0.0352,
+        "D_C": 0.2383
+      },
+      "2006": {
+        "p_admin": 0.2837,
+        "p_clinical": 0.0369,
+        "D_C": 0.2467
+      },
+      "2007": {
+        "p_admin": 0.2928,
+        "p_clinical": 0.0383,
+        "D_C": 0.2545
+      },
+      "2008": {
+        "p_admin": 0.3017,
+        "p_clinical": 0.0398,
+        "D_C": 0.2619
+      },
+      "2009": {
+        "p_admin": 0.312,
+        "p_clinical": 0.0417,
+        "D_C": 0.2702
+      },
+      "2010": {
+        "p_admin": 0.321,
+        "p_clinical": 0.0439,
+        "D_C": 0.277
+      },
+      "2011": {
+        "p_admin": 0.3312,
+        "p_clinical": 0.0456,
+        "D_C": 0.2856
+      },
+      "2012": {
+        "p_admin": 0.342,
+        "p_clinical": 0.0475,
+        "D_C": 0.2946
+      },
+      "2013": {
+        "p_admin": 0.3529,
+        "p_clinical": 0.0505,
+        "D_C": 0.3024
+      },
+      "2014": {
+        "p_admin": 0.3647,
+        "p_clinical": 0.0528,
+        "D_C": 0.3119
+      },
+      "2015": {
+        "p_admin": 0.3761,
+        "p_clinical": 0.0548,
+        "D_C": 0.3213
+      },
+      "2016": {
+        "p_admin": 0.3867,
+        "p_clinical": 0.1495,
+        "D_C": 0.2371
+      },
+      "2017": {
+        "p_admin": 0.3969,
+        "p_clinical": 0.2156,
+        "D_C": 0.1814
+      },
+      "2018": {
+        "p_admin": 0.4058,
+        "p_clinical": 0.2506,
+        "D_C": 0.1552
+      },
+      "2019": {
+        "p_admin": 0.4159,
+        "p_clinical": 0.2767,
+        "D_C": 0.1392
+      },
+      "2020": {
+        "p_admin": 0.4247,
+        "p_clinical": 0.3025,
+        "D_C": 0.1223
+      },
+      "2021": {
+        "p_admin": 0.435,
+        "p_clinical": 0.322,
+        "D_C": 0.113
+      },
+      "2022": {
+        "p_admin": 0.4466,
+        "p_clinical": 0.3379,
+        "D_C": 0.1088
+      },
+      "2023": {
+        "p_admin": 0.4538,
+        "p_clinical": 0.348,
+        "D_C": 0.1058
+      },
+      "2024": {
+        "p_admin": 0.462,
+        "p_clinical": 0.3581,
+        "D_C": 0.1039
+      },
+      "2025": {
+        "p_admin": 0.4715,
+        "p_clinical": 0.37,
+        "D_C": 0.1014
+      },
+      "2026": {
+        "p_admin": 0.4729,
+        "p_clinical": 0.3715,
+        "D_C": 0.1014
+      }
+    },
+    "Hyperlipidemia": {
+      "2000": {
+        "p_admin": 0.0266,
+        "p_clinical": 0.0102,
+        "D_C": 0.0164
+      },
+      "2001": {
+        "p_admin": 0.0288,
+        "p_clinical": 0.0111,
+        "D_C": 0.0177
+      },
+      "2002": {
+        "p_admin": 0.0299,
+        "p_clinical": 0.0117,
+        "D_C": 0.0182
+      },
+      "2003": {
+        "p_admin": 0.0321,
+        "p_clinical": 0.0122,
+        "D_C": 0.0199
+      },
+      "2004": {
+        "p_admin": 0.0347,
+        "p_clinical": 0.0129,
+        "D_C": 0.0218
+      },
+      "2005": {
+        "p_admin": 0.0373,
+        "p_clinical": 0.0138,
+        "D_C": 0.0235
+      },
+      "2006": {
+        "p_admin": 0.0396,
+        "p_clinical": 0.0145,
+        "D_C": 0.0251
+      },
+      "2007": {
+        "p_admin": 0.0417,
+        "p_clinical": 0.0152,
+        "D_C": 0.0265
+      },
+      "2008": {
+        "p_admin": 0.0433,
+        "p_clinical": 0.0157,
+        "D_C": 0.0276
+      },
+      "2009": {
+        "p_admin": 0.0454,
+        "p_clinical": 0.0163,
+        "D_C": 0.0291
+      },
+      "2010": {
+        "p_admin": 0.0484,
+        "p_clinical": 0.0172,
+        "D_C": 0.0312
+      },
+      "2011": {
+        "p_admin": 0.0515,
+        "p_clinical": 0.0183,
+        "D_C": 0.0332
+      },
+      "2012": {
+        "p_admin": 0.0545,
+        "p_clinical": 0.0193,
+        "D_C": 0.0351
+      },
+      "2013": {
+        "p_admin": 0.0573,
+        "p_clinical": 0.0206,
+        "D_C": 0.0368
+      },
+      "2014": {
+        "p_admin": 0.06,
+        "p_clinical": 0.0216,
+        "D_C": 0.0384
+      },
+      "2015": {
+        "p_admin": 0.062,
+        "p_clinical": 0.0232,
+        "D_C": 0.0389
+      },
+      "2016": {
+        "p_admin": 0.0654,
+        "p_clinical": 0.0408,
+        "D_C": 0.0247
+      },
+      "2017": {
+        "p_admin": 0.0682,
+        "p_clinical": 0.0627,
+        "D_C": 0.0055
+      },
+      "2018": {
+        "p_admin": 0.0708,
+        "p_clinical": 0.0822,
+        "D_C": -0.0114
+      },
+      "2019": {
+        "p_admin": 0.074,
+        "p_clinical": 0.0934,
+        "D_C": -0.0194
+      },
+      "2020": {
+        "p_admin": 0.0776,
+        "p_clinical": 0.1014,
+        "D_C": -0.0238
+      },
+      "2021": {
+        "p_admin": 0.0817,
+        "p_clinical": 0.108,
+        "D_C": -0.0262
+      },
+      "2022": {
+        "p_admin": 0.0854,
+        "p_clinical": 0.1154,
+        "D_C": -0.03
+      },
+      "2023": {
+        "p_admin": 0.0902,
+        "p_clinical": 0.1231,
+        "D_C": -0.0329
+      },
+      "2024": {
+        "p_admin": 0.0936,
+        "p_clinical": 0.1297,
+        "D_C": -0.0361
+      },
+      "2025": {
+        "p_admin": 0.098,
+        "p_clinical": 0.1381,
+        "D_C": -0.0401
+      },
+      "2026": {
+        "p_admin": 0.0986,
+        "p_clinical": 0.1391,
+        "D_C": -0.0404
+      }
+    },
+    "Prediabetes": {
+      "2000": {
+        "p_admin": 0.1818,
+        "p_clinical": 0.0244,
+        "D_C": 0.1574
+      },
+      "2001": {
+        "p_admin": 0.1895,
+        "p_clinical": 0.0258,
+        "D_C": 0.1637
+      },
+      "2002": {
+        "p_admin": 0.1967,
+        "p_clinical": 0.0269,
+        "D_C": 0.1698
+      },
+      "2003": {
+        "p_admin": 0.2036,
+        "p_clinical": 0.0284,
+        "D_C": 0.1752
+      },
+      "2004": {
+        "p_admin": 0.2114,
+        "p_clinical": 0.0296,
+        "D_C": 0.1818
+      },
+      "2005": {
+        "p_admin": 0.2187,
+        "p_clinical": 0.0312,
+        "D_C": 0.1875
+      },
+      "2006": {
+        "p_admin": 0.2258,
+        "p_clinical": 0.0323,
+        "D_C": 0.1935
+      },
+      "2007": {
+        "p_admin": 0.2335,
+        "p_clinical": 0.033,
+        "D_C": 0.2004
+      },
+      "2008": {
+        "p_admin": 0.2414,
+        "p_clinical": 0.0343,
+        "D_C": 0.2071
+      },
+      "2009": {
+        "p_admin": 0.2485,
+        "p_clinical": 0.0354,
+        "D_C": 0.2132
+      },
+      "2010": {
+        "p_admin": 0.2562,
+        "p_clinical": 0.0369,
+        "D_C": 0.2193
+      },
+      "2011": {
+        "p_admin": 0.2651,
+        "p_clinical": 0.0386,
+        "D_C": 0.2265
+      },
+      "2012": {
+        "p_admin": 0.2711,
+        "p_clinical": 0.0409,
+        "D_C": 0.2302
+      },
+      "2013": {
+        "p_admin": 0.281,
+        "p_clinical": 0.0439,
+        "D_C": 0.237
+      },
+      "2014": {
+        "p_admin": 0.2887,
+        "p_clinical": 0.0459,
+        "D_C": 0.2428
+      },
+      "2015": {
+        "p_admin": 0.2957,
+        "p_clinical": 0.0477,
+        "D_C": 0.248
+      },
+      "2016": {
+        "p_admin": 0.304,
+        "p_clinical": 0.1738,
+        "D_C": 0.1302
+      },
+      "2017": {
+        "p_admin": 0.3106,
+        "p_clinical": 0.2461,
+        "D_C": 0.0645
+      },
+      "2018": {
+        "p_admin": 0.3187,
+        "p_clinical": 0.2702,
+        "D_C": 0.0485
+      },
+      "2019": {
+        "p_admin": 0.3258,
+        "p_clinical": 0.2789,
+        "D_C": 0.047
+      },
+      "2020": {
+        "p_admin": 0.3348,
+        "p_clinical": 0.2885,
+        "D_C": 0.0464
+      },
+      "2021": {
+        "p_admin": 0.342,
+        "p_clinical": 0.2965,
+        "D_C": 0.0455
+      },
+      "2022": {
+        "p_admin": 0.3496,
+        "p_clinical": 0.305,
+        "D_C": 0.0446
+      },
+      "2023": {
+        "p_admin": 0.3581,
+        "p_clinical": 0.3143,
+        "D_C": 0.0437
+      },
+      "2024": {
+        "p_admin": 0.3644,
+        "p_clinical": 0.3216,
+        "D_C": 0.0429
+      },
+      "2025": {
+        "p_admin": 0.3725,
+        "p_clinical": 0.3309,
+        "D_C": 0.0417
+      },
+      "2026": {
+        "p_admin": 0.3735,
+        "p_clinical": 0.332,
+        "D_C": 0.0415
+      }
+    }
+  },
+  "comorbidity_analysis": {
+    "stats": {
+      "mean_conditions_per_patient": 19.59,
+      "median_conditions_per_patient": 19.0,
+      "pct_5plus_conditions": 93.3,
+      "pct_10plus_conditions": 83.6,
+      "max_conditions": 69
+    },
+    "co_occurrence": {
+      "Diabetes+Hypertension": {
+        "observed": 2034,
+        "expected": 1095.3,
+        "ratio": 1.86
+      },
+      "Diabetes+Obesity": {
+        "observed": 3511,
+        "expected": 2284.8,
+        "ratio": 1.54
+      },
+      "Diabetes+Hyperlipidemia": {
+        "observed": 834,
+        "expected": 476.7,
+        "ratio": 1.75
+      },
+      "Diabetes+Prediabetes": {
+        "observed": 4286,
+        "expected": 1804.8,
+        "ratio": 2.37
+      },
+      "Hypertension+Obesity": {
+        "observed": 2011,
+        "expected": 1229.9,
+        "ratio": 1.64
+      },
+      "Hypertension+Hyperlipidemia": {
+        "observed": 524,
+        "expected": 256.6,
+        "ratio": 2.04
+      },
+      "Hypertension+Prediabetes": {
+        "observed": 1585,
+        "expected": 971.5,
+        "ratio": 1.63
+      },
+      "Obesity+Hyperlipidemia": {
+        "observed": 901,
+        "expected": 535.3,
+        "ratio": 1.68
+      },
+      "Obesity+Prediabetes": {
+        "observed": 3093,
+        "expected": 2026.7,
+        "ratio": 1.53
+      },
+      "Hyperlipidemia+Prediabetes": {
+        "observed": 724,
+        "expected": 422.8,
+        "ratio": 1.71
+      }
+    }
+  },
+  "documentation_action_gap": {
+    "Diabetes": {
+      "n_coded": 4832,
+      "n_treated": 1176,
+      "n_gap": 3656,
+      "gap_rate": 0.7566
+    },
+    "Hypertension": {
+      "n_coded": 2601,
+      "n_treated": 2601,
+      "n_gap": 0,
+      "gap_rate": 0.0
+    },
+    "Obesity": {
+      "n_coded": 5426,
+      "n_treated": 5,
+      "n_gap": 5421,
+      "gap_rate": 0.9991
+    },
+    "Hyperlipidemia": {
+      "n_coded": 1132,
+      "n_treated": 1131,
+      "n_gap": 1,
+      "gap_rate": 0.0009
+    }
+  }
+}

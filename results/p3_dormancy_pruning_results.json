@@ -1,0 +1,435 @@
+{
+  "metadata": {
+    "study": "P3 Preserve Don't Prune: Dormancy vs. Pruning Pre-Study",
+    "dataset": "Synthea v3.x synthetic EHR",
+    "n_patients": 11475,
+    "n_unique_conditions": 309,
+    "timestamp": "2026-03-30T07:46:21.358732",
+    "citation": "Walonoski J et al. Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record. JAMIA 2018;25(3):230-238."
+  },
+  "frequency_distribution": {
+    "ultra_rare": {
+      "n_conditions": 54,
+      "pct_of_vocabulary": 17.5
+    },
+    "rare": {
+      "n_conditions": 91,
+      "pct_of_vocabulary": 29.4
+    },
+    "uncommon": {
+      "n_conditions": 91,
+      "pct_of_vocabulary": 29.4
+    },
+    "common": {
+      "n_conditions": 48,
+      "pct_of_vocabulary": 15.5
+    },
+    "very_common": {
+      "n_conditions": 25,
+      "pct_of_vocabulary": 8.1
+    }
+  },
+  "pruning_simulation": {
+    "threshold_0.001": {
+      "threshold_pct": 0.1,
+      "n_conditions_pruned": 54,
+      "n_conditions_retained": 255,
+      "pct_vocabulary_lost": 17.5,
+      "n_patients_affected": 193,
+      "pct_patients_affected": 1.7,
+      "mean_conditions_lost_per_affected": 1.41,
+      "max_conditions_lost": 8
+    },
+    "threshold_0.005": {
+      "threshold_pct": 0.5,
+      "n_conditions_pruned": 111,
+      "n_conditions_retained": 198,
+      "pct_vocabulary_lost": 35.9,
+      "n_patients_affected": 1242,
+      "pct_patients_affected": 10.8,
+      "mean_conditions_lost_per_affected": 1.49,
+      "max_conditions_lost": 10
+    },
+    "threshold_0.01": {
+      "threshold_pct": 1.0,
+      "n_conditions_pruned": 145,
+      "n_conditions_retained": 164,
+      "pct_vocabulary_lost": 46.9,
+      "n_patients_affected": 2796,
+      "pct_patients_affected": 24.4,
+      "mean_conditions_lost_per_affected": 1.65,
+      "max_conditions_lost": 12
+    },
+    "threshold_0.02": {
+      "threshold_pct": 2.0,
+      "n_conditions_pruned": 182,
+      "n_conditions_retained": 127,
+      "pct_vocabulary_lost": 58.9,
+      "n_patients_affected": 5496,
+      "pct_patients_affected": 47.9,
+      "mean_conditions_lost_per_affected": 1.99,
+      "max_conditions_lost": 18
+    },
+    "threshold_0.05": {
+      "threshold_pct": 5.0,
+      "n_conditions_pruned": 236,
+      "n_conditions_retained": 73,
+      "pct_vocabulary_lost": 76.4,
+      "n_patients_affected": 8981,
+      "pct_patients_affected": 78.3,
+      "mean_conditions_lost_per_affected": 3.48,
+      "max_conditions_lost": 24
+    }
+  },
+  "network_degradation": {
+    "threshold_0.001": {
+      "n_nodes_full": 50,
+      "n_nodes_retained": 50,
+      "n_edges_full": 1249,
+      "n_edges_retained": 1249,
+      "edge_loss_pct": 0.0,
+      "node_loss_pct": 0.0
+    },
+    "threshold_0.005": {
+      "n_nodes_full": 50,
+      "n_nodes_retained": 50,
+      "n_edges_full": 1249,
+      "n_edges_retained": 1249,
+      "edge_loss_pct": 0.0,
+      "node_loss_pct": 0.0
+    },
+    "threshold_0.01": {
+      "n_nodes_full": 50,
+      "n_nodes_retained": 50,
+      "n_edges_full": 1249,
+      "n_edges_retained": 1249,
+      "edge_loss_pct": 0.0,
+      "node_loss_pct": 0.0
+    },
+    "threshold_0.02": {
+      "n_nodes_full": 50,
+      "n_nodes_retained": 50,
+      "n_edges_full": 1249,
+      "n_edges_retained": 1249,
+      "edge_loss_pct": 0.0,
+      "node_loss_pct": 0.0
+    },
+    "threshold_0.05": {
+      "n_nodes_full": 50,
+      "n_nodes_retained": 50,
+      "n_edges_full": 1249,
+      "n_edges_retained": 1249,
+      "edge_loss_pct": 0.0,
+      "node_loss_pct": 0.0
+    }
+  },
+  "clinically_significant_rare": [
+    {
+      "condition": "Non-small cell carcinoma of lung  TNM stage 1 (disorder)",
+      "prevalence": 0.0095,
+      "n_patients": 109,
+      "n_prescriptions": 43688,
+      "medications": [
+        "Cisplatin 50 MG Injection",
+        "PACLitaxel 100 MG Injection"
+      ]
+    },
+    {
+      "condition": "Asthma (disorder)",
+      "prevalence": 0.00122,
+      "n_patients": 14,
+      "n_prescriptions": 19478,
+      "medications": [
+        "budesonide 0.25 MG/ML Inhalation Suspension",
+        "albuterol 0.21 MG/ML Inhalation Solution",
+        "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]"
+      ]
+    },
+    {
+      "condition": "Heart failure (disorder)",
+      "prevalence": 0.00096,
+      "n_patients": 11,
+      "n_prescriptions": 12089,
+      "medications": [
+        "Furosemide 40 MG Oral Tablet",
+        "carvedilol 25 MG Oral Tablet",
+        "losartan potassium 50 MG Oral Tablet"
+      ]
+    },
+    {
+      "condition": "Atrial fibrillation (disorder)",
+      "prevalence": 0.00906,
+      "n_patients": 104,
+      "n_prescriptions": 10843,
+      "medications": [
+        "verapamil hydrochloride 80 MG Oral Tablet [Calan]",
+        "Warfarin Sodium 5 MG Oral Tablet",
+        "Digoxin 0.125 MG Oral Tablet"
+      ]
+    },
+    {
+      "condition": "Primary small cell malignant neoplasm of lung  TNM stage 1 (disorder)",
+      "prevalence": 0.00157,
+      "n_patients": 18,
+      "n_prescriptions": 9678,
+      "medications": [
+        "Cisplatin 50 MG Injection",
+        "etoposide 100 MG Injection [Etopophos]"
+      ]
+    },
+    {
+      "condition": "Malignant neoplasm of colon (disorder)",
+      "prevalence": 0.00645,
+      "n_patients": 74,
+      "n_prescriptions": 1116,
+      "medications": [
+        "Leucovorin 100 MG Injection",
+        "10 ML oxaliplatin 5 MG/ML Injection"
+      ]
+    },
+    {
+      "condition": "Opioid abuse",
+      "prevalence": 0.00828,
+      "n_patients": 95,
+      "n_prescriptions": 800,
+      "medications": [
+        "buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet",
+        "Naltrexone hydrochloride 50 MG Oral Tablet",
+        "methadone hydrochloride 10 MG Oral Tablet"
+      ]
+    },
+    {
+      "condition": "Human immunodeficiency virus infection (disorder)",
+      "prevalence": 0.00322,
+      "n_patients": 37,
+      "n_prescriptions": 704,
+      "medications": [
+        "sulfamethoxazole 800 MG / trimethoprim 160 MG Oral Tablet",
+        "efavirenz 600 MG Oral Tablet",
+        "emtricitabine 200 MG / tenofovir disoproxil fumarate 300 MG Oral Tablet"
+      ]
+    },
+    {
+      "condition": "Acute deep venous thrombosis (disorder)",
+      "prevalence": 0.00558,
+      "n_patients": 64,
+      "n_prescriptions": 380,
+      "medications": [
+        "1 ML Enoxaparin sodium 150 MG/ML Prefilled Syringe",
+        "1 ML heparin sodium  porcine 5000 UNT/ML Injection"
+      ]
+    },
+    {
+      "condition": "Septic shock (disorder)",
+      "prevalence": 0.00767,
+      "n_patients": 88,
+      "n_prescriptions": 355,
+      "medications": [
+        "4 ML norepinephrine 1 MG/ML Injection",
+        "4 ML Norepinephrine 1 MG/ML Injection",
+        "1 ML Vasopressin (USP) 20 UNT/ML Injection"
+      ]
+    },
+    {
+      "condition": "Shock (disorder)",
+      "prevalence": 0.00174,
+      "n_patients": 20,
+      "n_prescriptions": 355,
+      "medications": [
+        "4 ML norepinephrine 1 MG/ML Injection",
+        "4 ML Norepinephrine 1 MG/ML Injection",
+        "1 ML Vasopressin (USP) 20 UNT/ML Injection"
+      ]
+    },
+    {
+      "condition": "Acute pulmonary embolism (disorder)",
+      "prevalence": 0.00575,
+      "n_patients": 66,
+      "n_prescriptions": 350,
+      "medications": [
+        "1 ML Enoxaparin sodium 150 MG/ML Prefilled Syringe"
+      ]
+    },
+    {
+      "condition": "Overlapping malignant neoplasm of colon (disorder)",
+      "prevalence": 0.00715,
+      "n_patients": 82,
+      "n_prescriptions": 264,
+      "medications": [
+        "Leucovorin 100 MG Injection",
+        "10 ML oxaliplatin 5 MG/ML Injection"
+      ]
+    },
+    {
+      "condition": "Contact dermatitis (disorder)",
+      "prevalence": 0.00505,
+      "n_patients": 58,
+      "n_prescriptions": 228,
+      "medications": [
+        "Hydrocortisone 10 MG/ML Topical Cream"
+      ]
+    },
+    {
+      "condition": "Metastatic malignant neoplasm to prostate (disorder)",
+      "prevalence": 0.00209,
+      "n_patients": 24,
+      "n_prescriptions": 162,
+      "medications": [
+        "Leucovorin 100 MG Injection",
+        "10 ML oxaliplatin 5 MG/ML Injection"
+      ]
+    },
+    {
+      "condition": "Metastatic malignant neoplasm to colon (disorder)",
+      "prevalence": 0.00122,
+      "n_patients": 14,
+      "n_prescriptions": 162,
+      "medications": [
+        "Leucovorin 100 MG Injection",
+        "10 ML oxaliplatin 5 MG/ML Injection"
+      ]
+    },
+    {
+      "condition": "Primary fibromyalgia syndrome (disorder)",
+      "prevalence": 0.00253,
+      "n_patients": 29,
+      "n_prescriptions": 106,
+      "medications": [
+        "Naproxen 500 MG Oral Tablet",
+        "duloxetine 20 MG Delayed Release Oral Capsule",
+        "Milnacipran hydrochloride 100 MG Oral Tablet"
+      ]
+    },
+    {
+      "condition": "Posttraumatic stress disorder (disorder)",
+      "prevalence": 0.00139,
+      "n_patients": 16,
+      "n_prescriptions": 102,
+      "medications": [
+        "acetaminophen 300 MG / hydrocodone bitartrate 10 MG Oral Tablet",
+        "Sertraline 100 MG Oral Tablet"
+      ]
+    },
+    {
+      "condition": "Familial Alzheimer's disease of early onset (disorder)",
+      "prevalence": 0.00514,
+      "n_patients": 59,
+      "n_prescriptions": 84,
+      "medications": [
+        "Galantamine 4 MG Oral Tablet",
+        "Memantine hydrochloride 2 MG/ML Oral Solution",
+        "24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule"
+      ]
+    },
+    {
+      "condition": "Cystic fibrosis (disorder)",
+      "prevalence": 0.00035,
+      "n_patients": 4,
+      "n_prescriptions": 80,
+      "medications": [
+        "dornase alfa 1 MG/ML Inhalation Solution [Pulmozyme]",
+        "Pancreatin 600 MG Oral Tablet"
+      ]
+    }
+  ],
+  "catastrophic_collapse": {
+    "threshold_0.001": {
+      "n_patients_with_rare": 193,
+      "mean_info_loss": 0.0725,
+      "median_info_loss": 0.0435,
+      "max_info_loss": 0.75,
+      "n_catastrophic_gt50pct": 2,
+      "n_severe_gt30pct": 6,
+      "pct_catastrophic": 1.0
+    },
+    "threshold_0.005": {
+      "n_patients_with_rare": 1242,
+      "mean_info_loss": 0.0652,
+      "median_info_loss": 0.0476,
+      "max_info_loss": 0.75,
+      "n_catastrophic_gt50pct": 4,
+      "n_severe_gt30pct": 14,
+      "pct_catastrophic": 0.3
+    },
+    "threshold_0.01": {
+      "n_patients_with_rare": 2796,
+      "mean_info_loss": 0.0726,
+      "median_info_loss": 0.0556,
+      "max_info_loss": 0.75,
+      "n_catastrophic_gt50pct": 5,
+      "n_severe_gt30pct": 25,
+      "pct_catastrophic": 0.2
+    },
+    "threshold_0.02": {
+      "n_patients_with_rare": 5496,
+      "mean_info_loss": 0.0933,
+      "median_info_loss": 0.0714,
+      "max_info_loss": 0.75,
+      "n_catastrophic_gt50pct": 8,
+      "n_severe_gt30pct": 114,
+      "pct_catastrophic": 0.1
+    },
+    "threshold_0.05": {
+      "n_patients_with_rare": 8981,
+      "mean_info_loss": 0.1631,
+      "median_info_loss": 0.1429,
+      "max_info_loss": 0.875,
+      "n_catastrophic_gt50pct": 67,
+      "n_severe_gt30pct": 776,
+      "pct_catastrophic": 0.7
+    }
+  },
+  "dormancy_benefit": {
+    "threshold": 0.01,
+    "n_conditions_preserved_by_dormancy": 145,
+    "n_diagnostic_bridges": 116,
+    "pct_rare_with_common_bridge": 80.0,
+    "examples": [
+      {
+        "rare_condition": "Metastatic malignant neoplasm to prostate (disorder)",
+        "n_patients": 24,
+        "common_comorbidities": {
+          "Medication review due (situation)": "327",
+          "Stress (finding)": "155",
+          "Gingivitis (disorder)": "153"
+        }
+      },
+      {
+        "rare_condition": "Vomiting symptom (finding)",
+        "n_patients": 41,
+        "common_comorbidities": {
+          "Medication review due (situation)": "196",
+          "Stress (finding)": "90",
+          "Full-time employment (finding)": "88"
+        }
+      },
+      {
+        "rare_condition": "Died in hospice (finding)",
+        "n_patients": 90,
+        "common_comorbidities": {
+          "Medication review due (situation)": "773",
+          "Stress (finding)": "370",
+          "Full-time employment (finding)": "355"
+        }
+      },
+      {
+        "rare_condition": "Kidney transplant failure and rejection (disorder)",
+        "n_patients": 31,
+        "common_comorbidities": {
+          "Medication review due (situation)": "1216",
+          "Stress (finding)": "505",
+          "Full-time employment (finding)": "423"
+        }
+      },
+      {
+        "rare_condition": "Traumatic injury of spinal cord and/or vertebral column (disorder)",
+        "n_patients": 22,
+        "common_comorbidities": {
+          "Medication review due (situation)": "111",
+          "Gingivitis (disorder)": "39",
+          "Full-time employment (finding)": "38"
+        }
+      }
+    ]
+  }
+}
