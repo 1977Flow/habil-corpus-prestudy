@@ -1,0 +1,101 @@
+{
+  "source": "MIMIC-IV-ECG-Ext-ICD v1.0.1 (PhysioNet, credentialed); CMS MS-DRG v41.1 App. G/H",
+  "episodes": 97737,
+  "patients": 57304,
+  "codes_per_episode": {
+    "ed_median": 2.0,
+    "hosp_median": 13.0,
+    "ed_mean": 2.15,
+    "hosp_mean": 13.55
+  },
+  "ccmcc_share_per_episode": {
+    "ed_mean": 0.2979,
+    "hosp_mean": 0.1876,
+    "wilcoxon_p": 0.0
+  },
+  "episodes_with_any_ccmcc": {
+    "ed": 0.4617,
+    "hosp": 0.792
+  },
+  "episodes_with_any_mcc": {
+    "ed": 0.1943,
+    "hosp": 0.4324
+  },
+  "hosp_codes_by_level": {
+    "added_in_hospital_claim": {
+      "none": 0.7987,
+      "CC": 0.1441,
+      "MCC": 0.0572,
+      "n": 1225799
+    },
+    "also_coded_in_ed": {
+      "none": 0.7045,
+      "MCC": 0.1052,
+      "CC": 0.1904,
+      "n": 98857
+    }
+  },
+  "sentinels": {
+    "diabetes": {
+      "prev_ed": 0.0796,
+      "prev_hosp": 0.3047,
+      "ratio_hosp_to_ed": 3.83,
+      "ed_only": 310,
+      "hosp_only": 22315,
+      "mcnemar_p": 0.0
+    },
+    "hypertension": {
+      "prev_ed": 0.1323,
+      "prev_hosp": 0.6299,
+      "ratio_hosp_to_ed": 4.76,
+      "ed_only": 946,
+      "hosp_only": 49580,
+      "mcnemar_p": 0.0
+    },
+    "depression": {
+      "prev_ed": 0.0154,
+      "prev_hosp": 0.1911,
+      "ratio_hosp_to_ed": 12.37,
+      "ed_only": 238,
+      "hosp_only": 17410,
+      "mcnemar_p": 0.0
+    },
+    "heart_failure": {
+      "prev_ed": 0.0479,
+      "prev_hosp": 0.2242,
+      "ratio_hosp_to_ed": 4.68,
+      "ed_only": 321,
+      "hosp_only": 17547,
+      "mcnemar_p": 0.0
+    },
+    "chronic_kidney_disease": {
+      "prev_ed": 0.0178,
+      "prev_hosp": 0.2088,
+      "ratio_hosp_to_ed": 11.74,
+      "ed_only": 55,
+      "hosp_only": 18728,
+      "mcnemar_p": 0.0
+    },
+    "hyponatraemia": {
+      "prev_ed": 0.0093,
+      "prev_hosp": 0.0736,
+      "ratio_hosp_to_ed": 7.94,
+      "ed_only": 231,
+      "hosp_only": 6522,
+      "mcnemar_p": 0.0
+    },
+    "malnutrition": {
+      "prev_ed": 0.0003,
+      "prev_hosp": 0.0406,
+      "ratio_hosp_to_ed": 158.76,
+      "ed_only": "<11",
+      "hosp_only": 3947,
+      "mcnemar_p": 0.0
+    }
+  },
+  "jsd_3char_ed_vs_hosp_bits": 0.2647,
+  "jsd_bootstrap_95ci": [
+    0.2642,
+    0.2671
+  ]
+}

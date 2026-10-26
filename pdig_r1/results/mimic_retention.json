@@ -1,0 +1,59 @@
+{
+  "episodes": 97737,
+  "ed_codes": 210575,
+  "hosp_codes": 1324656,
+  "ed_codes_retained": 98857,
+  "retention_overall": 0.4695,
+  "by_chapter": {
+    "R symptoms, signs, abnormal findings": {
+      "ed_share": 0.3107,
+      "retained": 0.3194,
+      "hosp_share": 0.0916
+    },
+    "I circulatory": {
+      "ed_share": 0.1701,
+      "retained": 0.6069,
+      "hosp_share": 0.1706
+    },
+    "other": {
+      "ed_share": 0.1303,
+      "retained": 0.3985,
+      "hosp_share": 0.218
+    },
+    "E endocrine, metabolic": {
+      "ed_share": 0.0954,
+      "retained": 0.5575,
+      "hosp_share": 0.1273
+    },
+    "S-T injury, poisoning": {
+      "ed_share": 0.0614,
+      "retained": 0.5318,
+      "hosp_share": 0.0286
+    },
+    "J respiratory": {
+      "ed_share": 0.0572,
+      "retained": 0.4936,
+      "hosp_share": 0.0418
+    },
+    "N genitourinary": {
+      "ed_share": 0.0491,
+      "retained": 0.6801,
+      "hosp_share": 0.0506
+    },
+    "K digestive": {
+      "ed_share": 0.049,
+      "retained": 0.375,
+      "hosp_share": 0.0607
+    },
+    "Z factors influencing health status": {
+      "ed_share": 0.0402,
+      "retained": 0.6673,
+      "hosp_share": 0.1496
+    },
+    "F mental, behavioural": {
+      "ed_share": 0.0367,
+      "retained": 0.6119,
+      "hosp_share": 0.0611
+    }
+  }
+}

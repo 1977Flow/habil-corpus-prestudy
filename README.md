@@ -66,6 +66,19 @@ Seven additional experiments across the habilitation corpus:
 | S3 | Coding variance | Mean CV 0.666 across organisations, 17/20 conditions high variance |
 | PRAXIS-AI | Domain operationalisation | 5.3% contradictory diagnoses, provider load CV 2.41 |
 
+### Governing the Loop, revision 1 (real coding data and learning agent)
+
+**Folder:** `pdig_r1/`
+
+Code and aggregate results for the revised manuscript "Governing the Loop: Three Architectures for AI Systems That Co-Produce Clinical and Administrative Reality" (Stummer, Schumacher, Thulesius, Müller, Frese). This analysis does not use Synthea.
+
+- `scripts/fetch_cms_cc_mcc.py` downloads the CMS MS-DRG v41.1 lists of complications or comorbidities (Appendix G) and major complications or comorbidities (Appendix H part 1) to `cms/cc_mcc_v41_1.csv`.
+- `scripts/mimic_coding_context.py` and `scripts/mimic_retention.py` compare, for the same emergency-department-to-admission episodes, the ICD-10-CM codes assigned in the emergency department and on the hospital discharge claim.
+- `scripts/learning_agent_loop.py` simulates a policy-gradient coding agent on the real code structure of these episodes (full grid of administrative weight, observability and reference regime, sensitivity and bootstrap analyses).
+- `scripts/summarise_and_plot.py` produces the summary, the supporting tables S1 to S3 and Fig 2; `scripts/draw_fig1_fig3.py` draws Figs 1 and 3.
+
+**Data:** MIMIC-IV-ECG-Ext-ICD v1.0.1 (Strodthoff N, Lopez Alcaraz JM, Haverkamp W; PhysioNet 2024; doi:10.13026/ypt5-9d58). The dataset is available to credentialed PhysioNet users and is not distributed here. Set the environment variable `MIMIC_ECG_ICD_CSV` to the path of `records_w_diag_icd10.csv`. Only aggregate results are included in `pdig_r1/results/`.
+
 ### Figures
 
 **Scripts:** `figures/generate_p2_figures.py`, `figures/generate_p3_figures.py`
@@ -80,6 +93,7 @@ All scripts require Python 3.10+ with:
 pandas>=2.0
 numpy>=1.24
 matplotlib>=3.7
+scipy>=1.11   # pdig_r1 only
 ```
 
 To reproduce all results:
@@ -101,10 +115,12 @@ If you use these scripts or results, please cite the relevant paper(s) from the 
 
 ## Associated Papers
 
-- **P1:** Stummer FO. The symptom and the billing code. SSRN. 2026.
-- **P2:** Stummer FO. Artificial epidemiology. medRxiv. 2026.
-- **P3:** Stummer FO. Preserve, don't prune. medRxiv. 2026.
-- **EMoT:** Stummer FO. Enhanced Mycelium of Thought. arXiv:2603.24065. 2026.
+- **P1:** Stummer FO. The symptom and the billing code. SSRN [preprint]. 2026. doi:10.2139/ssrn.6475038
+- **P2:** Stummer FO. Artificial epidemiology. Cambridge Open Engage [preprint]. 2026. doi:10.33774/coe-2026-ssm1q
+- **P3:** Stummer FO. Preserve, don't prune. Research Square [preprint]. 2026. doi:10.21203/rs.3.rs-9321746/v1
+- **EMoT:** Stummer FO. Enhanced Mycelium of Thought. arXiv [preprint]. 2026. arXiv:2603.24065
+
+The preprint venues for P2 and P3 were listed incorrectly as medRxiv in the initial release; corrected on 26 October 2026.
 
 ## License
 
